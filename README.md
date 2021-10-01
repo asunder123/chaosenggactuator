@@ -8,7 +8,8 @@ When Spring Boot Service is Up And ChaosToolKit is Run again showing actuator re
 
 
 Jaeger Client Trace: 
-![image](https://user-images.githubusercontent.com/50335583/135648953-ac48403c-830a-4610-ada7-fc6b47134711.png)
+![image](https://user-images.githubusercontent.com/50335583/135653683-d11997cd-2310-470a-a5b2-1398d95cf8f8.png)
+
 
 
 
