@@ -1,0 +1,42 @@
+{
+  "name": "chaos-monkey",
+  "version": "0.7.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node actuator.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/i0natan/node-chaos-monkey.git"
+  },
+  "dependencies": {
+    "@angular/cli": "^12.2.6",
+    "appmetrics-zipkin": "^1.0.3",
+    "body-parser": "^1.18.2",
+    "chaos-monkey": "^1.0.0",
+    "express-remove-route": "^1.0.0",
+    "jaeger-client": "^3.18.1",
+    "node-fetch": "^2.6.5",
+    "noop-logger": "^0.1.1",
+    "object-sizeof": "^1.2.0",
+    "on-finished": "^2.3.0",
+    "opentracing": "^0.14.5",
+    "prom-client": "^14.0.0",
+    "randomstring": "^1.1.5",
+    "res": "^0.4.0",
+    "response": "^0.1.0",
+    "zipkin": "^0.22.0",
+    "zipkin-instrumentation-fetch": "^0.22.0"
+  },
+  "peerDependencies": {
+    "express": "4.x"
+  },
+  "bugs": {
+    "url": "https://github.com/i0natan/node-chaos-monkey/issues"
+  },
+  "homepage": "https://github.com/i0natan/node-chaos-monkey#readme",
+  "keywords": [],
+  "description": ""
+}

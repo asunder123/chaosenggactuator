@@ -1,0 +1,132 @@
+{
+	"title": "Test actuator",
+	"description": "actuator",
+	"configuration": {
+		"tracing_provider": "jaeger",
+		"tracing_host": "127.0.0.1",
+		"tracing_port": 6831,
+		"tracing_propagation": "b3"
+
+
+	},
+	"steady-state-hypothesis": {
+		"title": "The file must be around first",
+		"probes": [       {
+          
+				"type": "probe",
+				"name": "file-must-exist",
+				"tolerance": true,
+				"provider": {
+					"type": "python",
+					"module": "os.path",
+					"func": "exists",
+					"arguments": {
+						"path": "C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2032.0_x64__qbz5n2kfra8p0\\lib\\ntpath.py"
+					}
+				}
+			},
+			  {
+                "type": "probe",
+                "name": "function-must-respond",
+                "tolerance": 200,
+                "provider": {
+                    "type": "http",
+                    "timeout": [3, 5],
+                    "secrets": ["global"],
+                    "url": "http://localhost:8082/actuator",
+                    "method": "GET",
+                    "headers": {
+                        "Content-Type": "application/json",
+                        "Authorization": ""
+                    },
+                    "arguments": ""
+                }
+            },
+			{
+				"type": "probe",
+				"name": "function-must-exist",
+				"tolerance": 200,
+				"provider": {
+					"type": "http",
+					"timeout": [5, 500],
+					"secrets": [],
+					"url": "http://localhost:8082/actuator",
+					"headers": {
+						"Authorization": ""
+					}
+				}
+			}
+		]
+	},
+
+	"controls": [{
+		"name": "tracing",
+		"scope" : "after",
+		"automatic": true,
+		"provider": {
+			"type": "python",
+			"module": "chaostracing.control"
+
+		}
+	}],
+	"method": [
+	 {
+            "name": "trigger-kill",
+            "provider": {
+                "type": "http",
+                "url": "http://localhost:8082/"
+            },
+            "type": "probe"
+        },
+		       {
+    "name": "enable_chaosmonkey",
+    "provider": {
+        "arguments": {
+            "base_url": "http://localhost:8082/actuator"
+        },
+        "func": "enable_chaosmonkey",
+        "module": "chaosspring.actions",
+        "type": "python"
+    },
+    "type" : "action"
+		       },{
+            "type": "action",
+            "name": "simulate-user-traffic",
+            "background": true,
+            "provider": {
+                "type": "process",
+                "path" : "actuator",
+                "arguments": "-cpus 3 attack -targets=data/scenario.txt -workers=2 -connections=1 -rate=3 -timeout=3s -duration=30s -output=result.bin"
+            }
+        },{  
+    "type" : "action",
+    "name": "disable_chaosmonkey",
+    "provider": {
+        "arguments": {
+            "base_url": "http://localhost:8082/actuator"
+        },
+        "func": "disable_chaosmonkey",
+        "module": "chaosspring.actions",
+        "type": "python"
+    }},
+		{
+			"type": "action",
+			"name": "file-be-gone",
+			"provider": {
+				"type": "python",
+				"module": "os",
+				"func": "remove",
+				"arguments": {
+					"path": "C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2032.0_x64__qbz5n2kfra8p0\\lib\\ntpath.py"
+				}
+			},
+			"pauses": {
+				"after": 100
+			}
+		},
+		{
+			"ref": "file-must-exist"
+		}
+	],
+	"rollbacks": []
+}
