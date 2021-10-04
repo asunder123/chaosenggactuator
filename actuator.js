@@ -15,12 +15,12 @@ res.set({
   'content-type': 'application/json'
 }).send('{"status": "0"}');	  
 //res.end(Prometheus.register.metrics());//
-const {
+//const {
   Tracer,
   BatchRecorder,
   jsonEncoder: {JSON_V2}
-} = require('zipkin');
-const {HttpLogger} = require('zipkin-transport-http');
+} = require('zipkin');//
+//const {HttpLogger} = require('zipkin-transport-http');//
 //const noop = require('noop-logger');
 
 const recorder = new BatchRecorder({
@@ -70,7 +70,7 @@ serviceName: 'actuator',
             },
 reporter: {   logSpans: true,  },
 sampler: {    type: 'const',    param: 1  }};
-var options = {  tags: {    'actuator.version': '0.0.0',  } ,logger: console};
+var options = {  tags: { 'actuator.version': '0.0.0',  } ,logger: console};
 var tracer = initTracer(config, options);
 const span = tracer.startSpan("http_request");
 span.addTags({

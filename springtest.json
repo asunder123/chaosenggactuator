@@ -1,18 +1,18 @@
 {
 	"title": "Test actuator",
 	"description": "actuator",
-	"configuration": {
-		"tracing_provider": "jaeger",
-		"tracing_host": "127.0.0.1",
-		"tracing_port": 6831,
-		"tracing_propagation": "b3"
-
-
-	},
+    "configuration": 
+    {
+	"actuator" : "http://127.0.0.1:8082/actuator",
+        "tracing_provider": "jaeger",
+        "tracing_host": "127.0.0.1",
+        "tracing_port": 6831,
+        "tracing_propagation": "b3"
+    },
 	"steady-state-hypothesis": {
 		"title": "The file must be around first",
-		"probes": [       {
-          
+		"probes": [ {
+
 				"type": "probe",
 				"name": "file-must-exist",
 				"tolerance": true,
@@ -26,29 +26,46 @@
 				}
 			},
 			  {
-                "type": "probe",
-                "name": "function-must-respond",
-                "tolerance": 200,
-                "provider": {
-                    "type": "http",
-                    "timeout": [3, 5],
-                    "secrets": ["global"],
-                    "url": "http://localhost:8082/actuator",
-                    "method": "GET",
-                    "headers": {
-                        "Content-Type": "application/json",
-                        "Authorization": ""
-                    },
-                    "arguments": ""
-                }
-            },
+        
+	"type":"probe",
+	"name": "actuator",
+	"timeout" : 300,
+	"tolerance":200,
+	"actuator" : "http://127.0.0.1:8082/actuator",
+        "tracing_provider": "jaeger",
+        "tracing_host": "127.0.0.1",
+	"provider": {
+	"type": "http",
+	"url" : "http://localhost:8082/actuator",
+	"method": "GET"
+	},
+	"arguments": "",
+        "tracing_port": 6831,
+        "tracing_propagation": "b3"
+    },
 			{
+				"type": "probe",
+				"name": "function-must-respond",
+				"tolerance": 200,
+				"provider": {
+					"type": "http",
+					"timeout": [3, 500],
+					"secrets": [],
+					"url": "http://localhost:8082/actuator",
+					"method": "GET",
+					"headers": {
+						"Content-Type": "application/json",
+						"Authorization": ""
+					},
+					"arguments": ""
+				}
+			}, {
 				"type": "probe",
 				"name": "function-must-exist",
 				"tolerance": 200,
 				"provider": {
 					"type": "http",
-					"timeout": [5, 500],
+					"timeout": [5, 1000],
 					"secrets": [],
 					"url": "http://localhost:8082/actuator",
 					"headers": {
@@ -61,54 +78,68 @@
 
 	"controls": [{
 		"name": "tracing",
-		"scope" : "after",
+		"scope": "after",
 		"automatic": true,
+		"span": "producer",
 		"provider": {
 			"type": "python",
 			"module": "chaostracing.control"
 
 		}
 	}],
-	"method": [
-	 {
-            "name": "trigger-kill",
-            "provider": {
-                "type": "http",
-                "url": "http://localhost:8082/"
-            },
-            "type": "probe"
-        },
-		       {
-    "name": "enable_chaosmonkey",
-    "provider": {
-        "arguments": {
-            "base_url": "http://localhost:8082/actuator"
-        },
-        "func": "enable_chaosmonkey",
-        "module": "chaosspring.actions",
-        "type": "python"
-    },
-    "type" : "action"
-		       },{
-            "type": "action",
-            "name": "simulate-user-traffic",
-            "background": true,
-            "provider": {
-                "type": "process",
-                "path" : "actuator",
-                "arguments": "-cpus 3 attack -targets=data/scenario.txt -workers=2 -connections=1 -rate=3 -timeout=3s -duration=30s -output=result.bin"
-            }
-        },{  
-    "type" : "action",
-    "name": "disable_chaosmonkey",
-    "provider": {
-        "arguments": {
-            "base_url": "http://localhost:8082/actuator"
-        },
-        "func": "disable_chaosmonkey",
-        "module": "chaosspring.actions",
-        "type": "python"
-    }},
+	"method": [{
+			"name": "stress_endpoint",
+			"type": "action",
+			"provider": {
+				"type": "python",
+				"module": "chaosk6.actions",
+				"func": "stress_endpoint",
+				"arguments": {
+					"endpoint": "http://localhost:8082/actuator"
+				}
+			}
+		},
+		{
+			"name": "trigger-kill",
+			"provider": {
+				"type": "http",
+				"url": "http://localhost:8082/actuator"
+			},
+			"type": "probe"
+		},
+		{
+			"name": "enable_chaosmonkey",
+			"provider": {
+				"arguments": {
+					"base_url": "http://localhost:8082/actuator"
+				},
+				"func": "enable_chaosmonkey",
+				"module": "chaosspring.actions",
+				"type": "python"
+			},
+			"type": "action"
+		}, {
+			"type": "action",
+			"name": "simulate-user-traffic",
+			"background": true,
+			"provider": {
+				"type": "process",
+				"path": "actuator",
+				"arguments": "-cpus 2 attack -targets=data/scenario.txt -workers=2 -connections=2 -rate=3 -timeout=10s -duration=3s -output=result.bin"
+			}
+		},
+		{
+			"type": "action",
+			"name": "disable_chaosmonkey",
+			"provider": {
+				"arguments": {
+					"base_url": "http://localhost:8082/actuator"
+				},
+				"func": "disable_chaosmonkey",
+				"module": "chaosspring.actions",
+				"type": "python"
+			}
+		},
 		{
 			"type": "action",
 			"name": "file-be-gone",
