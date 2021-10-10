@@ -14,6 +14,9 @@ Jaeger Client Trace of Chaos Toolkit:
 ![image](https://user-images.githubusercontent.com/50335583/136688752-e7d200bf-e3a6-4591-ae48-b34099efafcf.png)
 
 
+Failed to run method function-must-respond:
+![image](https://user-images.githubusercontent.com/50335583/136692118-032a7ef2-69e4-4523-91b3-9bd8f9dbb859.png)
+
 Failed to run method function-must-exist:
 ![image](https://user-images.githubusercontent.com/50335583/136691701-ecc8081c-eddc-4f3f-a40c-515a024c3fe6.png)
 
