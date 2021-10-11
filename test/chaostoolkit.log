@@ -576,3 +576,652 @@
 [36m[2021-10-10 21:43:33 DEBUG] [__init__:81][39m Cleaning up control 'tracing'
 [36m[2021-10-10 21:43:33 DEBUG] [python:174][39m Control 'cleanup_control' loaded from 'C:\Users\asunder\.venvs\chaostk\lib\site-packages\chaostracing\control.py'
 [36m[2021-10-10 21:43:34 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2021-10-11 08:21:05 DEBUG] [cli:103][39m ###############################################################################
+[36m[2021-10-11 08:21:05 DEBUG] [cli:104][39m Running command 'run'
+[36m[2021-10-11 08:21:05 DEBUG] [cli:108][39m Using settings file 'C:\Users\asunder\.chaostoolkit\settings.yaml'
+[36m[2021-10-11 08:21:07 DEBUG] [__init__:355][39m No controls to apply on 'loader'
+[36m[2021-10-11 08:21:07 DEBUG] [__init__:355][39m No controls to apply on 'loader'
+[31m[2021-10-11 08:21:07 ERROR] [cli:238][39m Path "springtest.json" does not exist.
+[36m[2021-10-11 08:21:07 DEBUG] [cli:239][39m Path "springtest.json" does not exist.
+[36m[2021-10-11 08:22:50 DEBUG] [cli:103][39m ###############################################################################
+[36m[2021-10-11 08:22:50 DEBUG] [cli:104][39m Running command 'run'
+[36m[2021-10-11 08:22:50 DEBUG] [cli:108][39m Using settings file 'C:\Users\asunder\.chaostoolkit\settings.yaml'
+[36m[2021-10-11 08:22:51 DEBUG] [__init__:355][39m No controls to apply on 'loader'
+[36m[2021-10-11 08:22:51 DEBUG] [__init__:355][39m No controls to apply on 'loader'
+[36m[2021-10-11 08:22:51 DEBUG] [caching:25][39m Building activity cache...
+[36m[2021-10-11 08:22:51 DEBUG] [caching:35][39m Cached 11 activities
+[32m[2021-10-11 08:22:51 INFO] [experiment:47][39m Validating the experiment's syntax
+[36m[2021-10-11 08:22:51 DEBUG] [configuration:54][39m Loading configuration...
+[36m[2021-10-11 08:22:51 DEBUG] [secret:75][39m Loading secrets...
+[36m[2021-10-11 08:22:51 DEBUG] [secret:92][39m Secrets loaded
+[36m[2021-10-11 08:22:52 DEBUG] [caching:42][39m Clearing activities cache
+[31m[2021-10-11 08:22:52 ERROR] [cli:248][39m path 'actuator' cannot be found, in activity 'simulate-user-traffic'
+[36m[2021-10-11 08:22:52 DEBUG] [cli:249][39m path 'actuator' cannot be found, in activity 'simulate-user-traffic'
+[36m[2021-10-11 08:25:01 DEBUG] [cli:103][39m ###############################################################################
+[36m[2021-10-11 08:25:01 DEBUG] [cli:104][39m Running command 'run'
+[36m[2021-10-11 08:25:01 DEBUG] [cli:108][39m Using settings file 'C:\Users\asunder\.chaostoolkit\settings.yaml'
+[36m[2021-10-11 08:25:02 DEBUG] [__init__:355][39m No controls to apply on 'loader'
+[36m[2021-10-11 08:25:02 DEBUG] [__init__:355][39m No controls to apply on 'loader'
+[36m[2021-10-11 08:25:02 DEBUG] [caching:25][39m Building activity cache...
+[36m[2021-10-11 08:25:02 DEBUG] [caching:35][39m Cached 11 activities
+[32m[2021-10-11 08:25:02 INFO] [experiment:47][39m Validating the experiment's syntax
+[36m[2021-10-11 08:25:02 DEBUG] [configuration:54][39m Loading configuration...
+[36m[2021-10-11 08:25:02 DEBUG] [secret:75][39m Loading secrets...
+[36m[2021-10-11 08:25:02 DEBUG] [secret:92][39m Secrets loaded
+[36m[2021-10-11 08:25:03 DEBUG] [caching:42][39m Clearing activities cache
+[31m[2021-10-11 08:25:03 ERROR] [cli:248][39m path 'actuator' cannot be found, in activity 'simulate-user-traffic'
+[36m[2021-10-11 08:25:03 DEBUG] [cli:249][39m path 'actuator' cannot be found, in activity 'simulate-user-traffic'
+[36m[2021-10-11 08:27:12 DEBUG] [cli:103][39m ###############################################################################
+[36m[2021-10-11 08:27:12 DEBUG] [cli:104][39m Running command 'run'
+[36m[2021-10-11 08:27:12 DEBUG] [cli:108][39m Using settings file 'C:\Users\asunder\.chaostoolkit\settings.yaml'
+[36m[2021-10-11 08:27:13 DEBUG] [__init__:355][39m No controls to apply on 'loader'
+[36m[2021-10-11 08:27:13 DEBUG] [__init__:355][39m No controls to apply on 'loader'
+[36m[2021-10-11 08:27:48 DEBUG] [cli:103][39m ###############################################################################
+[36m[2021-10-11 08:27:48 DEBUG] [cli:104][39m Running command 'run'
+[36m[2021-10-11 08:27:48 DEBUG] [cli:108][39m Using settings file 'C:\Users\asunder\.chaostoolkit\settings.yaml'
+[36m[2021-10-11 08:27:49 DEBUG] [__init__:355][39m No controls to apply on 'loader'
+[36m[2021-10-11 08:27:49 DEBUG] [__init__:355][39m No controls to apply on 'loader'
+[36m[2021-10-11 08:28:12 DEBUG] [cli:103][39m ###############################################################################
+[36m[2021-10-11 08:28:12 DEBUG] [cli:104][39m Running command 'run'
+[36m[2021-10-11 08:28:12 DEBUG] [cli:108][39m Using settings file 'C:\Users\asunder\.chaostoolkit\settings.yaml'
+[36m[2021-10-11 08:28:13 DEBUG] [__init__:355][39m No controls to apply on 'loader'
+[36m[2021-10-11 08:28:13 DEBUG] [__init__:355][39m No controls to apply on 'loader'
+[36m[2021-10-11 08:28:13 DEBUG] [caching:25][39m Building activity cache...
+[36m[2021-10-11 08:28:13 DEBUG] [caching:35][39m Cached 11 activities
+[32m[2021-10-11 08:28:13 INFO] [experiment:47][39m Validating the experiment's syntax
+[36m[2021-10-11 08:28:13 DEBUG] [configuration:54][39m Loading configuration...
+[36m[2021-10-11 08:28:13 DEBUG] [secret:75][39m Loading secrets...
+[36m[2021-10-11 08:28:13 DEBUG] [secret:92][39m Secrets loaded
+[36m[2021-10-11 08:28:13 DEBUG] [caching:42][39m Clearing activities cache
+[31m[2021-10-11 08:28:13 ERROR] [cli:248][39m path '$HOME/chaosengg/actuator/chaosenggactuator/actuator' cannot be found, in activity 'simulate-user-traffic'
+[36m[2021-10-11 08:28:13 DEBUG] [cli:249][39m path '$HOME/chaosengg/actuator/chaosenggactuator/actuator' cannot be found, in activity 'simulate-user-traffic'
+[36m[2021-10-11 08:29:18 DEBUG] [cli:103][39m ###############################################################################
+[36m[2021-10-11 08:29:18 DEBUG] [cli:104][39m Running command 'run'
+[36m[2021-10-11 08:29:18 DEBUG] [cli:108][39m Using settings file 'C:\Users\asunder\.chaostoolkit\settings.yaml'
+[36m[2021-10-11 08:29:19 DEBUG] [__init__:355][39m No controls to apply on 'loader'
+[36m[2021-10-11 08:29:19 DEBUG] [__init__:355][39m No controls to apply on 'loader'
+[36m[2021-10-11 08:29:19 DEBUG] [caching:25][39m Building activity cache...
+[36m[2021-10-11 08:29:19 DEBUG] [caching:35][39m Cached 11 activities
+[32m[2021-10-11 08:29:19 INFO] [experiment:47][39m Validating the experiment's syntax
+[36m[2021-10-11 08:29:19 DEBUG] [configuration:54][39m Loading configuration...
+[36m[2021-10-11 08:29:19 DEBUG] [secret:75][39m Loading secrets...
+[36m[2021-10-11 08:29:19 DEBUG] [secret:92][39m Secrets loaded
+[36m[2021-10-11 08:29:19 DEBUG] [caching:42][39m Clearing activities cache
+[31m[2021-10-11 08:29:19 ERROR] [cli:248][39m path '$HOME\chaosengg\actuator\chaosenggactuator\actuator' cannot be found, in activity 'simulate-user-traffic'
+[36m[2021-10-11 08:29:19 DEBUG] [cli:249][39m path '$HOME\chaosengg\actuator\chaosenggactuator\actuator' cannot be found, in activity 'simulate-user-traffic'
+[36m[2021-10-11 08:30:11 DEBUG] [cli:103][39m ###############################################################################
+[36m[2021-10-11 08:30:11 DEBUG] [cli:104][39m Running command 'run'
+[36m[2021-10-11 08:30:11 DEBUG] [cli:108][39m Using settings file 'C:\Users\asunder\.chaostoolkit\settings.yaml'
+[36m[2021-10-11 08:30:12 DEBUG] [__init__:355][39m No controls to apply on 'loader'
+[36m[2021-10-11 08:30:12 DEBUG] [__init__:355][39m No controls to apply on 'loader'
+[36m[2021-10-11 08:30:12 DEBUG] [caching:25][39m Building activity cache...
+[36m[2021-10-11 08:30:12 DEBUG] [caching:35][39m Cached 11 activities
+[32m[2021-10-11 08:30:12 INFO] [experiment:47][39m Validating the experiment's syntax
+[36m[2021-10-11 08:30:12 DEBUG] [configuration:54][39m Loading configuration...
+[36m[2021-10-11 08:30:12 DEBUG] [secret:75][39m Loading secrets...
+[36m[2021-10-11 08:30:12 DEBUG] [secret:92][39m Secrets loaded
+[36m[2021-10-11 08:30:12 DEBUG] [python:167][39m Control module 'C:\Users\asunder\.venvs\chaostk\lib\site-packages\chaostracing\control.py' does not declare 'validate_control'
+[32m[2021-10-11 08:30:12 INFO] [experiment:96][39m Experiment looks valid
+[36m[2021-10-11 08:30:12 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2021-10-11 08:30:12 DEBUG] [caching:25][39m Building activity cache...
+[36m[2021-10-11 08:30:12 DEBUG] [caching:35][39m Cached 11 activities
+[36m[2021-10-11 08:30:12 DEBUG] [configuration:54][39m Loading configuration...
+[36m[2021-10-11 08:30:12 DEBUG] [secret:75][39m Loading secrets...
+[36m[2021-10-11 08:30:12 DEBUG] [secret:92][39m Secrets loaded
+[36m[2021-10-11 08:30:12 DEBUG] [exit:89][39m System 'Windows-10-10.0.19042-SP0' does not expose SIGUSR signals
+[32m[2021-10-11 08:30:12 INFO] [run:321][39m Running experiment: Test actuator
+[36m[2021-10-11 08:30:12 DEBUG] [run:652][39m 1 activities will be run in the background
+[36m[2021-10-11 08:30:12 DEBUG] [__init__:39][39m Initializing controls
+[36m[2021-10-11 08:30:12 DEBUG] [__init__:48][39m Initializing control 'tracing'
+[36m[2021-10-11 08:30:12 DEBUG] [python:174][39m Control 'configure_control' loaded from 'C:\Users\asunder\.venvs\chaostk\lib\site-packages\chaostracing\control.py'
+[36m[2021-10-11 08:30:12 DEBUG] [control:24][39m Configuring opentracing control...
+[36m[2021-10-11 08:30:12 DEBUG] [control:29][39m Creating a jaeger tracer
+[36m[2021-10-11 08:30:12 DEBUG] [control:311][39m Configured Jaeger Tracer to send to '127.0.0.1:6831'
+[36m[2021-10-11 08:30:12 DEBUG] [control:41][39m OpenTracing tracer <jaeger_client.tracer.Tracer object at 0x0000024294435E80> created
+[32m[2021-10-11 08:30:12 INFO] [run:340][39m Steady-state strategy: default
+[32m[2021-10-11 08:30:12 INFO] [run:343][39m Rollbacks strategy: default
+[36m[2021-10-11 08:30:12 DEBUG] [__init__:365][39m Applying before-control 'tracing' on 'experiment'
+[36m[2021-10-11 08:30:12 DEBUG] [python:174][39m Control 'before_experiment_control' loaded from 'C:\Users\asunder\.venvs\chaostk\lib\site-packages\chaostracing\control.py'
+[36m[2021-10-11 08:30:12 DEBUG] [run:464][39m Running steady-state hypothesis before the method
+[32m[2021-10-11 08:30:12 INFO] [hypothesis:183][39m Steady state hypothesis: The file must be around first
+[36m[2021-10-11 08:30:12 DEBUG] [__init__:355][39m No controls to apply on 'hypothesis'
+[36m[2021-10-11 08:30:12 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[32m[2021-10-11 08:30:12 INFO] [activity:161][39m Probe: file-must-exist
+[36m[2021-10-11 08:30:12 DEBUG] [python:34][39m Activity 'file-must-exist' loaded from 'C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.2032.0_x64__qbz5n2kfra8p0\lib\genericpath.py'
+[36m[2021-10-11 08:30:12 DEBUG] [activity:180][39m   => succeeded with 'True'
+[36m[2021-10-11 08:30:12 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[36m[2021-10-11 08:30:12 DEBUG] [hypothesis:211][39m allowed tolerance is True
+[36m[2021-10-11 08:30:12 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[32m[2021-10-11 08:30:12 INFO] [activity:161][39m Probe: actuator
+[36m[2021-10-11 08:30:12 DEBUG] [activity:180][39m   => succeeded with '{'status': 200, 'headers': {'X-Powered-By': 'Express', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '15', 'ETag': 'W/"f-LGyo6FoLQfwOjZ2TD8Ehq8OjkFc"', 'Date': 'Mon, 11 Oct 2021 03:00:12 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=5'}, 'body': '{"status": "0"}'}'
+[36m[2021-10-11 08:30:12 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[36m[2021-10-11 08:30:12 DEBUG] [hypothesis:211][39m allowed tolerance is 200
+[36m[2021-10-11 08:30:12 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[32m[2021-10-11 08:30:12 INFO] [activity:161][39m Probe: function-must-respond
+[36m[2021-10-11 08:30:13 DEBUG] [activity:180][39m   => succeeded with '{'status': 200, 'headers': {'X-Powered-By': 'Express', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '15', 'ETag': 'W/"f-LGyo6FoLQfwOjZ2TD8Ehq8OjkFc"', 'Date': 'Mon, 11 Oct 2021 03:00:13 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=5'}, 'body': '{"status": "0"}'}'
+[36m[2021-10-11 08:30:13 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[36m[2021-10-11 08:30:13 DEBUG] [hypothesis:211][39m allowed tolerance is 200
+[36m[2021-10-11 08:30:13 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[32m[2021-10-11 08:30:13 INFO] [activity:161][39m Probe: function-must-exist
+[36m[2021-10-11 08:30:13 DEBUG] [activity:180][39m   => succeeded with '{'status': 200, 'headers': {'X-Powered-By': 'Express', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '15', 'ETag': 'W/"f-LGyo6FoLQfwOjZ2TD8Ehq8OjkFc"', 'Date': 'Mon, 11 Oct 2021 03:00:13 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=5'}, 'body': '{"status": "0"}'}'
+[36m[2021-10-11 08:30:13 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[36m[2021-10-11 08:30:13 DEBUG] [hypothesis:211][39m allowed tolerance is 200
+[32m[2021-10-11 08:30:13 INFO] [hypothesis:221][39m Steady state hypothesis is met!
+[36m[2021-10-11 08:30:13 DEBUG] [__init__:355][39m No controls to apply on 'hypothesis'
+[32m[2021-10-11 08:30:13 INFO] [run:551][39m Playing your experiment's method now...
+[36m[2021-10-11 08:30:13 DEBUG] [__init__:355][39m No controls to apply on 'method'
+[36m[2021-10-11 08:30:13 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[32m[2021-10-11 08:30:13 INFO] [activity:161][39m Action: method-tracing
+[36m[2021-10-11 08:30:13 DEBUG] [python:34][39m Activity 'method-tracing' loaded from 'C:\Users\asunder\.venvs\chaostk\lib\site-packages\chaostracing\control.py'
+[36m[2021-10-11 08:30:13 DEBUG] [control:24][39m Configuring opentracing control...
+[36m[2021-10-11 08:30:13 DEBUG] [control:29][39m Creating a jaeger tracer
+[36m[2021-10-11 08:30:13 DEBUG] [control:311][39m Configured Jaeger Tracer to send to '127.0.0.1:6831'
+[36m[2021-10-11 08:30:13 DEBUG] [control:41][39m OpenTracing tracer None created
+[36m[2021-10-11 08:30:13 DEBUG] [activity:182][39m   => succeeded without any result value
+[32m[2021-10-11 08:30:13 INFO] [activity:198][39m Pausing after activity for 20s...
+[36m[2021-10-11 08:30:33 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[36m[2021-10-11 08:30:33 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[32m[2021-10-11 08:30:33 INFO] [activity:161][39m Action: stress_endpoint
+[36m[2021-10-11 08:30:33 DEBUG] [python:34][39m Activity 'stress_endpoint' loaded from 'C:\Users\asunder\.venvs\chaostk\lib\site-packages\chaosk6\actions.py'
+[32m[2021-10-11 08:30:33 INFO] [actions:50][39m Stressing the endpoint "http://localhost:8082/actuator" with 1 VUs for 1s.
+[36m[2021-10-11 08:30:33 DEBUG] [activity:235][39m Activity failed
+    Traceback (most recent call last):
+      File "C:\Users\asunder\.venvs\chaostk\lib\site-packages\chaoslib\provider\python.py", line 55, in run_python_activity
+        return func(**arguments)
+      File "C:\Users\asunder\.venvs\chaostk\lib\site-packages\chaosk6\actions.py", line 57, in stress_endpoint
+        r = _runScript(jsPath + "/single-endpoint.js", vus, duration, env)
+      File "C:\Users\asunder\.venvs\chaostk\lib\site-packages\chaosk6\actions.py", line 74, in _runScript
+        with subprocess.Popen(
+      File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.2032.0_x64__qbz5n2kfra8p0\lib\subprocess.py", line 951, in __init__
+        self._execute_child(args, executable, preexec_fn, close_fds,
+      File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.2032.0_x64__qbz5n2kfra8p0\lib\subprocess.py", line 1420, in _execute_child
+        hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+    FileNotFoundError: [WinError 2] The system cannot find the file specified
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "C:\Users\asunder\.venvs\chaostk\lib\site-packages\chaoslib\activity.py", line 228, in run_activity
+        result = run_python_activity(activity, configuration, secrets)
+      File "C:\Users\asunder\.venvs\chaostk\lib\site-packages\chaoslib\provider\python.py", line 57, in run_python_activity
+        raise ActivityFailed(
+      File "C:\Users\asunder\.venvs\chaostk\lib\site-packages\chaoslib\provider\python.py", line 55, in run_python_activity
+        return func(**arguments)
+      File "C:\Users\asunder\.venvs\chaostk\lib\site-packages\chaosk6\actions.py", line 57, in stress_endpoint
+        r = _runScript(jsPath + "/single-endpoint.js", vus, duration, env)
+      File "C:\Users\asunder\.venvs\chaostk\lib\site-packages\chaosk6\actions.py", line 74, in _runScript
+        with subprocess.Popen(
+      File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.2032.0_x64__qbz5n2kfra8p0\lib\subprocess.py", line 951, in __init__
+        self._execute_child(args, executable, preexec_fn, close_fds,
+      File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.2032.0_x64__qbz5n2kfra8p0\lib\subprocess.py", line 1420, in _execute_child
+        hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+    chaoslib.exceptions.ActivityFailed: FileNotFoundError: [WinError 2] The system cannot find the file specified
+[31m[2021-10-11 08:30:33 ERROR] [activity:188][39m   => failed: FileNotFoundError: [WinError 2] The system cannot find the file specified
+[36m[2021-10-11 08:30:33 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[36m[2021-10-11 08:30:33 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[32m[2021-10-11 08:30:33 INFO] [activity:161][39m Probe: trigger-kill
+[36m[2021-10-11 08:30:33 DEBUG] [activity:180][39m   => succeeded with '{'status': 200, 'headers': {'X-Powered-By': 'Express', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '15', 'ETag': 'W/"f-LGyo6FoLQfwOjZ2TD8Ehq8OjkFc"', 'Date': 'Mon, 11 Oct 2021 03:00:33 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=5'}, 'body': '{"status": "0"}'}'
+[36m[2021-10-11 08:30:33 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[36m[2021-10-11 08:30:33 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[32m[2021-10-11 08:30:33 INFO] [activity:161][39m Action: enable_chaosmonkey
+[36m[2021-10-11 08:30:33 DEBUG] [python:34][39m Activity 'enable_chaosmonkey' loaded from 'C:\Users\asunder\.venvs\chaostk\lib\site-packages\chaosspring\actions.py'
+[36m[2021-10-11 08:30:33 DEBUG] [activity:235][39m Activity failed
+    Traceback (most recent call last):
+      File "C:\Users\asunder\.venvs\chaostk\lib\site-packages\chaoslib\provider\python.py", line 55, in run_python_activity
+        return func(**arguments)
+      File "C:\Users\asunder\.venvs\chaostk\lib\site-packages\chaosspring\actions.py", line 33, in enable_chaosmonkey
+        raise FailedActivity(
+    chaoslib.exceptions.ActivityFailed: Enable ChaosMonkey failed: <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <title>Error</title>
+    </head>
+    <body>
+    <pre>Cannot POST /actuator/chaosmonkey/enable</pre>
+    </body>
+    </html>
+    
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "C:\Users\asunder\.venvs\chaostk\lib\site-packages\chaoslib\activity.py", line 228, in run_activity
+        result = run_python_activity(activity, configuration, secrets)
+      File "C:\Users\asunder\.venvs\chaostk\lib\site-packages\chaoslib\provider\python.py", line 57, in run_python_activity
+        raise ActivityFailed(
+      File "C:\Users\asunder\.venvs\chaostk\lib\site-packages\chaoslib\provider\python.py", line 55, in run_python_activity
+        return func(**arguments)
+      File "C:\Users\asunder\.venvs\chaostk\lib\site-packages\chaosspring\actions.py", line 33, in enable_chaosmonkey
+        raise FailedActivity(
+    chaoslib.exceptions.ActivityFailed: chaoslib.exceptions.ActivityFailed: Enable ChaosMonkey failed: <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <title>Error</title>
+    </head>
+    <body>
+    <pre>Cannot POST /actuator/chaosmonkey/enable</pre>
+    </body>
+    </html>
+[31m[2021-10-11 08:30:33 ERROR] [activity:188][39m   => failed: chaoslib.exceptions.ActivityFailed: Enable ChaosMonkey failed: <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <title>Error</title>
+    </head>
+    <body>
+    <pre>Cannot POST /actuator/chaosmonkey/enable</pre>
+    </body>
+    </html>
+[36m[2021-10-11 08:30:33 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[36m[2021-10-11 08:30:33 DEBUG] [activity:117][39m activity will run in the background
+[36m[2021-10-11 08:30:33 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[36m[2021-10-11 08:30:33 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[32m[2021-10-11 08:30:33 INFO] [activity:158][39m Action: simulate-user-traffic [in background]
+[32m[2021-10-11 08:30:33 INFO] [activity:161][39m Action: disable_chaosmonkey
+[36m[2021-10-11 08:30:33 DEBUG] [python:34][39m Activity 'disable_chaosmonkey' loaded from 'C:\Users\asunder\.venvs\chaostk\lib\site-packages\chaosspring\actions.py'
+[36m[2021-10-11 08:30:33 DEBUG] [activity:180][39m   => succeeded with '{'status': 200, 'headers': {'X-Powered-By': 'Express', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '15', 'ETag': 'W/"f-LGyo6FoLQfwOjZ2TD8Ehq8OjkFc"', 'Date': 'Mon, 11 Oct 2021 03:00:33 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=5'}, 'body': '{"status": "0"}'}'
+[36m[2021-10-11 08:30:33 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[36m[2021-10-11 08:30:33 DEBUG] [activity:235][39m Activity failed
+    Traceback (most recent call last):
+      File "C:\Users\asunder\.venvs\chaostk\lib\site-packages\chaoslib\provider\python.py", line 55, in run_python_activity
+        return func(**arguments)
+      File "C:\Users\asunder\.venvs\chaostk\lib\site-packages\chaosspring\actions.py", line 57, in disable_chaosmonkey
+        raise FailedActivity(
+    chaoslib.exceptions.ActivityFailed: Disable ChaosMonkey failed: <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <title>Error</title>
+    </head>
+    <body>
+    <pre>Cannot POST /actuator/chaosmonkey/disable</pre>
+    </body>
+    </html>
+    
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "C:\Users\asunder\.venvs\chaostk\lib\site-packages\chaoslib\activity.py", line 228, in run_activity
+        result = run_python_activity(activity, configuration, secrets)
+      File "C:\Users\asunder\.venvs\chaostk\lib\site-packages\chaoslib\provider\python.py", line 57, in run_python_activity
+        raise ActivityFailed(
+      File "C:\Users\asunder\.venvs\chaostk\lib\site-packages\chaoslib\provider\python.py", line 55, in run_python_activity
+        return func(**arguments)
+      File "C:\Users\asunder\.venvs\chaostk\lib\site-packages\chaosspring\actions.py", line 57, in disable_chaosmonkey
+        raise FailedActivity(
+    chaoslib.exceptions.ActivityFailed: chaoslib.exceptions.ActivityFailed: Disable ChaosMonkey failed: <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <title>Error</title>
+    </head>
+    <body>
+    <pre>Cannot POST /actuator/chaosmonkey/disable</pre>
+    </body>
+    </html>
+[31m[2021-10-11 08:30:33 ERROR] [activity:188][39m   => failed: chaoslib.exceptions.ActivityFailed: Disable ChaosMonkey failed: <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <title>Error</title>
+    </head>
+    <body>
+    <pre>Cannot POST /actuator/chaosmonkey/disable</pre>
+    </body>
+    </html>
+[36m[2021-10-11 08:30:33 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[36m[2021-10-11 08:30:33 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[32m[2021-10-11 08:30:33 INFO] [activity:161][39m Action: file-be-gone
+[36m[2021-10-11 08:30:33 DEBUG] [activity:235][39m Activity failed
+    Traceback (most recent call last):
+      File "C:\Users\asunder\.venvs\chaostk\lib\site-packages\chaoslib\provider\python.py", line 55, in run_python_activity
+        return func(**arguments)
+    PermissionError: [WinError 5] Access is denied: 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2032.0_x64__qbz5n2kfra8p0\\lib\\ntpath.py'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "C:\Users\asunder\.venvs\chaostk\lib\site-packages\chaoslib\activity.py", line 228, in run_activity
+        result = run_python_activity(activity, configuration, secrets)
+      File "C:\Users\asunder\.venvs\chaostk\lib\site-packages\chaoslib\provider\python.py", line 57, in run_python_activity
+        raise ActivityFailed(
+      File "C:\Users\asunder\.venvs\chaostk\lib\site-packages\chaoslib\provider\python.py", line 55, in run_python_activity
+        return func(**arguments)
+    chaoslib.exceptions.ActivityFailed: PermissionError: [WinError 5] Access is denied: 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2032.0_x64__qbz5n2kfra8p0\\lib\\ntpath.py'
+[31m[2021-10-11 08:30:33 ERROR] [activity:188][39m   => failed: PermissionError: [WinError 5] Access is denied: 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2032.0_x64__qbz5n2kfra8p0\\lib\\ntpath.py'
+[32m[2021-10-11 08:30:33 INFO] [activity:198][39m Pausing after activity for 100s...
+[36m[2021-10-11 08:32:13 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[36m[2021-10-11 08:32:13 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[32m[2021-10-11 08:32:13 INFO] [activity:161][39m Probe: file-must-exist
+[36m[2021-10-11 08:32:13 DEBUG] [python:34][39m Activity 'file-must-exist' loaded from 'C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.2032.0_x64__qbz5n2kfra8p0\lib\genericpath.py'
+[36m[2021-10-11 08:32:13 DEBUG] [activity:180][39m   => succeeded with 'True'
+[36m[2021-10-11 08:32:13 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[36m[2021-10-11 08:32:13 DEBUG] [run:760][39m Waiting for background activities to complete
+[36m[2021-10-11 08:32:13 DEBUG] [__init__:355][39m No controls to apply on 'method'
+[36m[2021-10-11 08:32:13 DEBUG] [run:494][39m Running steady-state hypothesis after the method
+[32m[2021-10-11 08:32:13 INFO] [hypothesis:183][39m Steady state hypothesis: The file must be around first
+[36m[2021-10-11 08:32:13 DEBUG] [__init__:355][39m No controls to apply on 'hypothesis'
+[36m[2021-10-11 08:32:13 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[32m[2021-10-11 08:32:13 INFO] [activity:161][39m Probe: file-must-exist
+[36m[2021-10-11 08:32:13 DEBUG] [python:34][39m Activity 'file-must-exist' loaded from 'C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.2032.0_x64__qbz5n2kfra8p0\lib\genericpath.py'
+[36m[2021-10-11 08:32:13 DEBUG] [activity:180][39m   => succeeded with 'True'
+[36m[2021-10-11 08:32:13 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[36m[2021-10-11 08:32:13 DEBUG] [hypothesis:211][39m allowed tolerance is True
+[36m[2021-10-11 08:32:13 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[32m[2021-10-11 08:32:13 INFO] [activity:161][39m Probe: actuator
+[36m[2021-10-11 08:32:13 DEBUG] [activity:180][39m   => succeeded with '{'status': 200, 'headers': {'X-Powered-By': 'Express', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '15', 'ETag': 'W/"f-LGyo6FoLQfwOjZ2TD8Ehq8OjkFc"', 'Date': 'Mon, 11 Oct 2021 03:02:13 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=5'}, 'body': '{"status": "0"}'}'
+[36m[2021-10-11 08:32:13 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[36m[2021-10-11 08:32:13 DEBUG] [hypothesis:211][39m allowed tolerance is 200
+[36m[2021-10-11 08:32:13 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[32m[2021-10-11 08:32:13 INFO] [activity:161][39m Probe: function-must-respond
+[36m[2021-10-11 08:32:13 DEBUG] [activity:180][39m   => succeeded with '{'status': 200, 'headers': {'X-Powered-By': 'Express', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '15', 'ETag': 'W/"f-LGyo6FoLQfwOjZ2TD8Ehq8OjkFc"', 'Date': 'Mon, 11 Oct 2021 03:02:13 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=5'}, 'body': '{"status": "0"}'}'
+[36m[2021-10-11 08:32:13 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[36m[2021-10-11 08:32:13 DEBUG] [hypothesis:211][39m allowed tolerance is 200
+[36m[2021-10-11 08:32:13 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[32m[2021-10-11 08:32:13 INFO] [activity:161][39m Probe: function-must-exist
+[36m[2021-10-11 08:32:13 DEBUG] [activity:180][39m   => succeeded with '{'status': 200, 'headers': {'X-Powered-By': 'Express', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '15', 'ETag': 'W/"f-LGyo6FoLQfwOjZ2TD8Ehq8OjkFc"', 'Date': 'Mon, 11 Oct 2021 03:02:13 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=5'}, 'body': '{"status": "0"}'}'
+[36m[2021-10-11 08:32:13 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[36m[2021-10-11 08:32:13 DEBUG] [hypothesis:211][39m allowed tolerance is 200
+[32m[2021-10-11 08:32:13 INFO] [hypothesis:221][39m Steady state hypothesis is met!
+[36m[2021-10-11 08:32:13 DEBUG] [__init__:355][39m No controls to apply on 'hypothesis'
+[32m[2021-10-11 08:32:13 INFO] [run:807][39m Let's rollback...
+[36m[2021-10-11 08:32:13 DEBUG] [__init__:355][39m No controls to apply on 'rollback'
+[32m[2021-10-11 08:32:13 INFO] [rollback:25][39m No declared rollbacks, let's move on.
+[36m[2021-10-11 08:32:13 DEBUG] [__init__:355][39m No controls to apply on 'rollback'
+[32m[2021-10-11 08:32:13 INFO] [run:419][39m Experiment ended with status: completed
+[36m[2021-10-11 08:32:13 DEBUG] [__init__:72][39m Cleaning up controls
+[36m[2021-10-11 08:32:13 DEBUG] [__init__:81][39m Cleaning up control 'tracing'
+[36m[2021-10-11 08:32:13 DEBUG] [python:174][39m Control 'cleanup_control' loaded from 'C:\Users\asunder\.venvs\chaostk\lib\site-packages\chaostracing\control.py'
+[36m[2021-10-11 08:32:15 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2021-10-11 08:34:41 DEBUG] [cli:103][39m ###############################################################################
+[36m[2021-10-11 08:34:41 DEBUG] [cli:104][39m Running command 'run'
+[36m[2021-10-11 08:34:41 DEBUG] [cli:108][39m Using settings file 'C:\Users\asunder\.chaostoolkit\settings.yaml'
+[36m[2021-10-11 08:34:43 DEBUG] [__init__:355][39m No controls to apply on 'loader'
+[36m[2021-10-11 08:34:43 DEBUG] [__init__:355][39m No controls to apply on 'loader'
+[36m[2021-10-11 08:34:43 DEBUG] [caching:25][39m Building activity cache...
+[36m[2021-10-11 08:34:43 DEBUG] [caching:35][39m Cached 11 activities
+[32m[2021-10-11 08:34:43 INFO] [experiment:47][39m Validating the experiment's syntax
+[36m[2021-10-11 08:34:43 DEBUG] [configuration:54][39m Loading configuration...
+[36m[2021-10-11 08:34:43 DEBUG] [secret:75][39m Loading secrets...
+[36m[2021-10-11 08:34:43 DEBUG] [secret:92][39m Secrets loaded
+[36m[2021-10-11 08:34:43 DEBUG] [python:167][39m Control module 'C:\Users\asunder\.venvs\chaostk\lib\site-packages\chaostracing\control.py' does not declare 'validate_control'
+[32m[2021-10-11 08:34:43 INFO] [experiment:96][39m Experiment looks valid
+[36m[2021-10-11 08:34:43 DEBUG] [caching:42][39m Clearing activities cache
+[36m[2021-10-11 08:34:43 DEBUG] [caching:25][39m Building activity cache...
+[36m[2021-10-11 08:34:43 DEBUG] [caching:35][39m Cached 11 activities
+[36m[2021-10-11 08:34:43 DEBUG] [configuration:54][39m Loading configuration...
+[36m[2021-10-11 08:34:43 DEBUG] [secret:75][39m Loading secrets...
+[36m[2021-10-11 08:34:43 DEBUG] [secret:92][39m Secrets loaded
+[36m[2021-10-11 08:34:43 DEBUG] [exit:89][39m System 'Windows-10-10.0.19042-SP0' does not expose SIGUSR signals
+[32m[2021-10-11 08:34:43 INFO] [run:321][39m Running experiment: Test actuator
+[36m[2021-10-11 08:34:43 DEBUG] [run:652][39m 1 activities will be run in the background
+[36m[2021-10-11 08:34:43 DEBUG] [__init__:39][39m Initializing controls
+[36m[2021-10-11 08:34:43 DEBUG] [__init__:48][39m Initializing control 'tracing'
+[36m[2021-10-11 08:34:43 DEBUG] [python:174][39m Control 'configure_control' loaded from 'C:\Users\asunder\.venvs\chaostk\lib\site-packages\chaostracing\control.py'
+[36m[2021-10-11 08:34:43 DEBUG] [control:24][39m Configuring opentracing control...
+[36m[2021-10-11 08:34:43 DEBUG] [control:29][39m Creating a jaeger tracer
+[36m[2021-10-11 08:34:43 DEBUG] [control:311][39m Configured Jaeger Tracer to send to '127.0.0.1:6831'
+[36m[2021-10-11 08:34:43 DEBUG] [control:41][39m OpenTracing tracer <jaeger_client.tracer.Tracer object at 0x0000015EF2935E80> created
+[32m[2021-10-11 08:34:43 INFO] [run:340][39m Steady-state strategy: default
+[32m[2021-10-11 08:34:43 INFO] [run:343][39m Rollbacks strategy: default
+[36m[2021-10-11 08:34:43 DEBUG] [__init__:365][39m Applying before-control 'tracing' on 'experiment'
+[36m[2021-10-11 08:34:43 DEBUG] [python:174][39m Control 'before_experiment_control' loaded from 'C:\Users\asunder\.venvs\chaostk\lib\site-packages\chaostracing\control.py'
+[36m[2021-10-11 08:34:43 DEBUG] [run:464][39m Running steady-state hypothesis before the method
+[32m[2021-10-11 08:34:43 INFO] [hypothesis:183][39m Steady state hypothesis: The file must be around first
+[36m[2021-10-11 08:34:43 DEBUG] [__init__:355][39m No controls to apply on 'hypothesis'
+[36m[2021-10-11 08:34:43 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[32m[2021-10-11 08:34:43 INFO] [activity:161][39m Probe: file-must-exist
+[36m[2021-10-11 08:34:43 DEBUG] [python:34][39m Activity 'file-must-exist' loaded from 'C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.2032.0_x64__qbz5n2kfra8p0\lib\genericpath.py'
+[36m[2021-10-11 08:34:43 DEBUG] [activity:180][39m   => succeeded with 'True'
+[36m[2021-10-11 08:34:43 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[36m[2021-10-11 08:34:43 DEBUG] [hypothesis:211][39m allowed tolerance is True
+[36m[2021-10-11 08:34:43 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[32m[2021-10-11 08:34:43 INFO] [activity:161][39m Probe: actuator
+[36m[2021-10-11 08:34:43 DEBUG] [activity:180][39m   => succeeded with '{'status': 200, 'headers': {'X-Powered-By': 'Express', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '15', 'ETag': 'W/"f-LGyo6FoLQfwOjZ2TD8Ehq8OjkFc"', 'Date': 'Mon, 11 Oct 2021 03:04:43 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=5'}, 'body': '{"status": "0"}'}'
+[36m[2021-10-11 08:34:43 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[36m[2021-10-11 08:34:43 DEBUG] [hypothesis:211][39m allowed tolerance is 200
+[36m[2021-10-11 08:34:43 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[32m[2021-10-11 08:34:43 INFO] [activity:161][39m Probe: function-must-respond
+[36m[2021-10-11 08:34:43 DEBUG] [activity:180][39m   => succeeded with '{'status': 200, 'headers': {'X-Powered-By': 'Express', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '15', 'ETag': 'W/"f-LGyo6FoLQfwOjZ2TD8Ehq8OjkFc"', 'Date': 'Mon, 11 Oct 2021 03:04:43 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=5'}, 'body': '{"status": "0"}'}'
+[36m[2021-10-11 08:34:43 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[36m[2021-10-11 08:34:43 DEBUG] [hypothesis:211][39m allowed tolerance is 200
+[36m[2021-10-11 08:34:43 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[32m[2021-10-11 08:34:43 INFO] [activity:161][39m Probe: function-must-exist
+[36m[2021-10-11 08:34:43 DEBUG] [activity:180][39m   => succeeded with '{'status': 200, 'headers': {'X-Powered-By': 'Express', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '15', 'ETag': 'W/"f-LGyo6FoLQfwOjZ2TD8Ehq8OjkFc"', 'Date': 'Mon, 11 Oct 2021 03:04:43 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=5'}, 'body': '{"status": "0"}'}'
+[36m[2021-10-11 08:34:43 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[36m[2021-10-11 08:34:43 DEBUG] [hypothesis:211][39m allowed tolerance is 200
+[32m[2021-10-11 08:34:43 INFO] [hypothesis:221][39m Steady state hypothesis is met!
+[36m[2021-10-11 08:34:43 DEBUG] [__init__:355][39m No controls to apply on 'hypothesis'
+[32m[2021-10-11 08:34:43 INFO] [run:551][39m Playing your experiment's method now...
+[36m[2021-10-11 08:34:43 DEBUG] [__init__:355][39m No controls to apply on 'method'
+[36m[2021-10-11 08:34:43 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[32m[2021-10-11 08:34:43 INFO] [activity:161][39m Action: method-tracing
+[36m[2021-10-11 08:34:43 DEBUG] [python:34][39m Activity 'method-tracing' loaded from 'C:\Users\asunder\.venvs\chaostk\lib\site-packages\chaostracing\control.py'
+[36m[2021-10-11 08:34:43 DEBUG] [control:24][39m Configuring opentracing control...
+[36m[2021-10-11 08:34:43 DEBUG] [control:29][39m Creating a jaeger tracer
+[36m[2021-10-11 08:34:43 DEBUG] [control:311][39m Configured Jaeger Tracer to send to '127.0.0.1:6831'
+[36m[2021-10-11 08:34:43 DEBUG] [control:41][39m OpenTracing tracer None created
+[36m[2021-10-11 08:34:43 DEBUG] [activity:182][39m   => succeeded without any result value
+[32m[2021-10-11 08:34:43 INFO] [activity:198][39m Pausing after activity for 20s...
+[36m[2021-10-11 08:35:03 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[36m[2021-10-11 08:35:03 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[32m[2021-10-11 08:35:03 INFO] [activity:161][39m Action: stress_endpoint
+[36m[2021-10-11 08:35:03 DEBUG] [python:34][39m Activity 'stress_endpoint' loaded from 'C:\Users\asunder\.venvs\chaostk\lib\site-packages\chaosk6\actions.py'
+[32m[2021-10-11 08:35:03 INFO] [actions:50][39m Stressing the endpoint "http://localhost:8082/actuator" with 1 VUs for 1s.
+[36m[2021-10-11 08:35:03 DEBUG] [activity:235][39m Activity failed
+    Traceback (most recent call last):
+      File "C:\Users\asunder\.venvs\chaostk\lib\site-packages\chaoslib\provider\python.py", line 55, in run_python_activity
+        return func(**arguments)
+      File "C:\Users\asunder\.venvs\chaostk\lib\site-packages\chaosk6\actions.py", line 57, in stress_endpoint
+        r = _runScript(jsPath + "/single-endpoint.js", vus, duration, env)
+      File "C:\Users\asunder\.venvs\chaostk\lib\site-packages\chaosk6\actions.py", line 74, in _runScript
+        with subprocess.Popen(
+      File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.2032.0_x64__qbz5n2kfra8p0\lib\subprocess.py", line 951, in __init__
+        self._execute_child(args, executable, preexec_fn, close_fds,
+      File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.2032.0_x64__qbz5n2kfra8p0\lib\subprocess.py", line 1420, in _execute_child
+        hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+    FileNotFoundError: [WinError 2] The system cannot find the file specified
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "C:\Users\asunder\.venvs\chaostk\lib\site-packages\chaoslib\activity.py", line 228, in run_activity
+        result = run_python_activity(activity, configuration, secrets)
+      File "C:\Users\asunder\.venvs\chaostk\lib\site-packages\chaoslib\provider\python.py", line 57, in run_python_activity
+        raise ActivityFailed(
+      File "C:\Users\asunder\.venvs\chaostk\lib\site-packages\chaoslib\provider\python.py", line 55, in run_python_activity
+        return func(**arguments)
+      File "C:\Users\asunder\.venvs\chaostk\lib\site-packages\chaosk6\actions.py", line 57, in stress_endpoint
+        r = _runScript(jsPath + "/single-endpoint.js", vus, duration, env)
+      File "C:\Users\asunder\.venvs\chaostk\lib\site-packages\chaosk6\actions.py", line 74, in _runScript
+        with subprocess.Popen(
+      File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.2032.0_x64__qbz5n2kfra8p0\lib\subprocess.py", line 951, in __init__
+        self._execute_child(args, executable, preexec_fn, close_fds,
+      File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.2032.0_x64__qbz5n2kfra8p0\lib\subprocess.py", line 1420, in _execute_child
+        hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+    chaoslib.exceptions.ActivityFailed: FileNotFoundError: [WinError 2] The system cannot find the file specified
+[31m[2021-10-11 08:35:03 ERROR] [activity:188][39m   => failed: FileNotFoundError: [WinError 2] The system cannot find the file specified
+[36m[2021-10-11 08:35:03 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[36m[2021-10-11 08:35:03 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[32m[2021-10-11 08:35:03 INFO] [activity:161][39m Probe: trigger-kill
+[36m[2021-10-11 08:35:03 DEBUG] [activity:180][39m   => succeeded with '{'status': 200, 'headers': {'X-Powered-By': 'Express', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '15', 'ETag': 'W/"f-LGyo6FoLQfwOjZ2TD8Ehq8OjkFc"', 'Date': 'Mon, 11 Oct 2021 03:05:03 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=5'}, 'body': '{"status": "0"}'}'
+[36m[2021-10-11 08:35:03 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[36m[2021-10-11 08:35:03 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[32m[2021-10-11 08:35:03 INFO] [activity:161][39m Action: enable_chaosmonkey
+[36m[2021-10-11 08:35:03 DEBUG] [python:34][39m Activity 'enable_chaosmonkey' loaded from 'C:\Users\asunder\.venvs\chaostk\lib\site-packages\chaosspring\actions.py'
+[36m[2021-10-11 08:35:03 DEBUG] [activity:235][39m Activity failed
+    Traceback (most recent call last):
+      File "C:\Users\asunder\.venvs\chaostk\lib\site-packages\chaoslib\provider\python.py", line 55, in run_python_activity
+        return func(**arguments)
+      File "C:\Users\asunder\.venvs\chaostk\lib\site-packages\chaosspring\actions.py", line 33, in enable_chaosmonkey
+        raise FailedActivity(
+    chaoslib.exceptions.ActivityFailed: Enable ChaosMonkey failed: <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <title>Error</title>
+    </head>
+    <body>
+    <pre>Cannot POST /actuator/chaosmonkey/enable</pre>
+    </body>
+    </html>
+    
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "C:\Users\asunder\.venvs\chaostk\lib\site-packages\chaoslib\activity.py", line 228, in run_activity
+        result = run_python_activity(activity, configuration, secrets)
+      File "C:\Users\asunder\.venvs\chaostk\lib\site-packages\chaoslib\provider\python.py", line 57, in run_python_activity
+        raise ActivityFailed(
+      File "C:\Users\asunder\.venvs\chaostk\lib\site-packages\chaoslib\provider\python.py", line 55, in run_python_activity
+        return func(**arguments)
+      File "C:\Users\asunder\.venvs\chaostk\lib\site-packages\chaosspring\actions.py", line 33, in enable_chaosmonkey
+        raise FailedActivity(
+    chaoslib.exceptions.ActivityFailed: chaoslib.exceptions.ActivityFailed: Enable ChaosMonkey failed: <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <title>Error</title>
+    </head>
+    <body>
+    <pre>Cannot POST /actuator/chaosmonkey/enable</pre>
+    </body>
+    </html>
+[31m[2021-10-11 08:35:03 ERROR] [activity:188][39m   => failed: chaoslib.exceptions.ActivityFailed: Enable ChaosMonkey failed: <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <title>Error</title>
+    </head>
+    <body>
+    <pre>Cannot POST /actuator/chaosmonkey/enable</pre>
+    </body>
+    </html>
+[36m[2021-10-11 08:35:03 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[36m[2021-10-11 08:35:03 DEBUG] [activity:117][39m activity will run in the background
+[36m[2021-10-11 08:35:03 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[36m[2021-10-11 08:35:03 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[32m[2021-10-11 08:35:03 INFO] [activity:158][39m Action: simulate-user-traffic [in background]
+[32m[2021-10-11 08:35:03 INFO] [activity:161][39m Action: disable_chaosmonkey
+[36m[2021-10-11 08:35:03 DEBUG] [python:34][39m Activity 'disable_chaosmonkey' loaded from 'C:\Users\asunder\.venvs\chaostk\lib\site-packages\chaosspring\actions.py'
+[36m[2021-10-11 08:35:03 DEBUG] [process:53][39m Running: .\actuator.JS -cpus 2 attack -targets=data/scenario.txt -workers=2 -connections=2 -rate=3 -timeout=10s -duration=3s -output=result.bin
+[36m[2021-10-11 08:35:03 DEBUG] [activity:235][39m Activity failed
+    Traceback (most recent call last):
+      File "C:\Users\asunder\.venvs\chaostk\lib\site-packages\chaoslib\provider\python.py", line 55, in run_python_activity
+        return func(**arguments)
+      File "C:\Users\asunder\.venvs\chaostk\lib\site-packages\chaosspring\actions.py", line 57, in disable_chaosmonkey
+        raise FailedActivity(
+    chaoslib.exceptions.ActivityFailed: Disable ChaosMonkey failed: <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <title>Error</title>
+    </head>
+    <body>
+    <pre>Cannot POST /actuator/chaosmonkey/disable</pre>
+    </body>
+    </html>
+    
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "C:\Users\asunder\.venvs\chaostk\lib\site-packages\chaoslib\activity.py", line 228, in run_activity
+        result = run_python_activity(activity, configuration, secrets)
+      File "C:\Users\asunder\.venvs\chaostk\lib\site-packages\chaoslib\provider\python.py", line 57, in run_python_activity
+        raise ActivityFailed(
+      File "C:\Users\asunder\.venvs\chaostk\lib\site-packages\chaoslib\provider\python.py", line 55, in run_python_activity
+        return func(**arguments)
+      File "C:\Users\asunder\.venvs\chaostk\lib\site-packages\chaosspring\actions.py", line 57, in disable_chaosmonkey
+        raise FailedActivity(
+    chaoslib.exceptions.ActivityFailed: chaoslib.exceptions.ActivityFailed: Disable ChaosMonkey failed: <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <title>Error</title>
+    </head>
+    <body>
+    <pre>Cannot POST /actuator/chaosmonkey/disable</pre>
+    </body>
+    </html>
+[31m[2021-10-11 08:35:03 ERROR] [activity:188][39m   => failed: chaoslib.exceptions.ActivityFailed: Disable ChaosMonkey failed: <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <title>Error</title>
+    </head>
+    <body>
+    <pre>Cannot POST /actuator/chaosmonkey/disable</pre>
+    </body>
+    </html>
+[36m[2021-10-11 08:35:03 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[36m[2021-10-11 08:35:03 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[32m[2021-10-11 08:35:03 INFO] [activity:161][39m Action: file-be-gone
+[36m[2021-10-11 08:35:03 DEBUG] [activity:235][39m Activity failed
+    Traceback (most recent call last):
+      File "C:\Users\asunder\.venvs\chaostk\lib\site-packages\chaoslib\provider\python.py", line 55, in run_python_activity
+        return func(**arguments)
+    PermissionError: [WinError 5] Access is denied: 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2032.0_x64__qbz5n2kfra8p0\\lib\\ntpath.py'
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "C:\Users\asunder\.venvs\chaostk\lib\site-packages\chaoslib\activity.py", line 228, in run_activity
+        result = run_python_activity(activity, configuration, secrets)
+      File "C:\Users\asunder\.venvs\chaostk\lib\site-packages\chaoslib\provider\python.py", line 57, in run_python_activity
+        raise ActivityFailed(
+      File "C:\Users\asunder\.venvs\chaostk\lib\site-packages\chaoslib\provider\python.py", line 55, in run_python_activity
+        return func(**arguments)
+    chaoslib.exceptions.ActivityFailed: PermissionError: [WinError 5] Access is denied: 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2032.0_x64__qbz5n2kfra8p0\\lib\\ntpath.py'
+[31m[2021-10-11 08:35:03 ERROR] [activity:188][39m   => failed: PermissionError: [WinError 5] Access is denied: 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2032.0_x64__qbz5n2kfra8p0\\lib\\ntpath.py'
+[32m[2021-10-11 08:35:03 INFO] [activity:198][39m Pausing after activity for 100s...
+[33m[2021-10-11 08:35:16 WARNING] [process:66][39m This process returned a non-zero exit code. This may indicate some error and not what you expected. Please have a look at the logs.
+[36m[2021-10-11 08:35:16 DEBUG] [activity:180][39m   => succeeded with '{'status': 1, 'stdout': '', 'stderr': ''}'
+[36m[2021-10-11 08:35:16 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[36m[2021-10-11 08:36:43 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[36m[2021-10-11 08:36:43 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[32m[2021-10-11 08:36:43 INFO] [activity:161][39m Probe: file-must-exist
+[36m[2021-10-11 08:36:43 DEBUG] [python:34][39m Activity 'file-must-exist' loaded from 'C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.2032.0_x64__qbz5n2kfra8p0\lib\genericpath.py'
+[36m[2021-10-11 08:36:43 DEBUG] [activity:180][39m   => succeeded with 'True'
+[36m[2021-10-11 08:36:43 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[36m[2021-10-11 08:36:43 DEBUG] [run:760][39m Waiting for background activities to complete
+[36m[2021-10-11 08:36:43 DEBUG] [__init__:355][39m No controls to apply on 'method'
+[36m[2021-10-11 08:36:43 DEBUG] [run:494][39m Running steady-state hypothesis after the method
+[32m[2021-10-11 08:36:43 INFO] [hypothesis:183][39m Steady state hypothesis: The file must be around first
+[36m[2021-10-11 08:36:43 DEBUG] [__init__:355][39m No controls to apply on 'hypothesis'
+[36m[2021-10-11 08:36:43 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[32m[2021-10-11 08:36:43 INFO] [activity:161][39m Probe: file-must-exist
+[36m[2021-10-11 08:36:43 DEBUG] [python:34][39m Activity 'file-must-exist' loaded from 'C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.2032.0_x64__qbz5n2kfra8p0\lib\genericpath.py'
+[36m[2021-10-11 08:36:43 DEBUG] [activity:180][39m   => succeeded with 'True'
+[36m[2021-10-11 08:36:43 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[36m[2021-10-11 08:36:43 DEBUG] [hypothesis:211][39m allowed tolerance is True
+[36m[2021-10-11 08:36:43 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[32m[2021-10-11 08:36:43 INFO] [activity:161][39m Probe: actuator
+[36m[2021-10-11 08:36:43 DEBUG] [activity:180][39m   => succeeded with '{'status': 200, 'headers': {'X-Powered-By': 'Express', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '15', 'ETag': 'W/"f-LGyo6FoLQfwOjZ2TD8Ehq8OjkFc"', 'Date': 'Mon, 11 Oct 2021 03:06:43 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=5'}, 'body': '{"status": "0"}'}'
+[36m[2021-10-11 08:36:43 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[36m[2021-10-11 08:36:43 DEBUG] [hypothesis:211][39m allowed tolerance is 200
+[36m[2021-10-11 08:36:43 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[32m[2021-10-11 08:36:43 INFO] [activity:161][39m Probe: function-must-respond
+[36m[2021-10-11 08:36:43 DEBUG] [activity:180][39m   => succeeded with '{'status': 200, 'headers': {'X-Powered-By': 'Express', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '15', 'ETag': 'W/"f-LGyo6FoLQfwOjZ2TD8Ehq8OjkFc"', 'Date': 'Mon, 11 Oct 2021 03:06:43 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=5'}, 'body': '{"status": "0"}'}'
+[36m[2021-10-11 08:36:43 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[36m[2021-10-11 08:36:43 DEBUG] [hypothesis:211][39m allowed tolerance is 200
+[36m[2021-10-11 08:36:43 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[32m[2021-10-11 08:36:43 INFO] [activity:161][39m Probe: function-must-exist
+[36m[2021-10-11 08:36:43 DEBUG] [activity:180][39m   => succeeded with '{'status': 200, 'headers': {'X-Powered-By': 'Express', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '15', 'ETag': 'W/"f-LGyo6FoLQfwOjZ2TD8Ehq8OjkFc"', 'Date': 'Mon, 11 Oct 2021 03:06:43 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=5'}, 'body': '{"status": "0"}'}'
+[36m[2021-10-11 08:36:43 DEBUG] [__init__:355][39m No controls to apply on 'activity'
+[36m[2021-10-11 08:36:43 DEBUG] [hypothesis:211][39m allowed tolerance is 200
+[32m[2021-10-11 08:36:43 INFO] [hypothesis:221][39m Steady state hypothesis is met!
+[36m[2021-10-11 08:36:43 DEBUG] [__init__:355][39m No controls to apply on 'hypothesis'
+[32m[2021-10-11 08:36:43 INFO] [run:807][39m Let's rollback...
+[36m[2021-10-11 08:36:43 DEBUG] [__init__:355][39m No controls to apply on 'rollback'
+[32m[2021-10-11 08:36:43 INFO] [rollback:25][39m No declared rollbacks, let's move on.
+[36m[2021-10-11 08:36:43 DEBUG] [__init__:355][39m No controls to apply on 'rollback'
+[32m[2021-10-11 08:36:43 INFO] [run:419][39m Experiment ended with status: completed
+[36m[2021-10-11 08:36:43 DEBUG] [__init__:72][39m Cleaning up controls
+[36m[2021-10-11 08:36:43 DEBUG] [__init__:81][39m Cleaning up control 'tracing'
+[36m[2021-10-11 08:36:43 DEBUG] [python:174][39m Control 'cleanup_control' loaded from 'C:\Users\asunder\.venvs\chaostk\lib\site-packages\chaostracing\control.py'
+[36m[2021-10-11 08:36:45 DEBUG] [caching:42][39m Clearing activities cache
