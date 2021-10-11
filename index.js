@@ -1,6 +1,6 @@
 const ChaosMonkey = require('chaos-monkey');
 //pass in a reference to express app so the monkey can generate damage also within Express routes. This param is optional //but without it some pranks won't be available
-ChaosMonkey.initialize('actuator.js');
+//ChaosMonkey.initialize('actuator.js');
 module.exports = {
   sideMonkeyPort: 8082,
   startMode: "passive", //config, passive (for API calls)
@@ -69,7 +69,7 @@ module.exports = {
   ]
 };
 const config = {
-  serviceName: 'name-of-the-service',
+  serviceName: 'actuator',
   reporter: {
     collectorEndpoint: 'http://jaegercollector:14268/api/traces',
     logSpans: true,
@@ -85,5 +85,5 @@ const options = {
   },
   logger: console,
 };
-const tracer = initTracer(config, options);
-module.exports = require('./chaos-control');
+//const tracer = initTracer(config, options);
+module.exports = require('chaos-control');
