@@ -2,7 +2,7 @@ const ChaosMonkey = require('chaos-monkey');
 //pass in a reference to express app so the monkey can generate damage also within Express routes. This param is optional //but without it some pranks won't be available
 ChaosMonkey.initialize('actuator.js');
 module.exports = {
-  sideMonkeyPort: 8081,
+  sideMonkeyPort: 8082,
   startMode: "passive", //config, passive (for API calls)
   pranks: [{
       name: "500-error-on-route",
@@ -86,3 +86,4 @@ const options = {
   logger: console,
 };
 const tracer = initTracer(config, options);
+module.exports = require('./chaos-control');

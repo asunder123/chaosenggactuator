@@ -1,0 +1,692 @@
+{
+  "chaoslib-version": "1.21.0",
+  "platform": "Windows-10-10.0.19042-SP0",
+  "node": "LNAR-5CD9051V6X",
+  "experiment": {
+    "title": "Test actuator",
+    "description": "actuator",
+    "configuration": {
+      "actuator": "http://127.0.0.1:8082/actuator",
+      "tracing_provider": "jaeger",
+      "tracing_host": "127.0.0.1",
+      "tracing_port": 6831,
+      "tracing_propagation": "b3"
+    },
+    "steady-state-hypothesis": {
+      "title": "The file must be around first",
+      "probes": [
+        {
+          "type": "probe",
+          "name": "file-must-exist",
+          "tolerance": true,
+          "provider": {
+            "type": "python",
+            "module": "os.path",
+            "func": "exists",
+            "arguments": {
+              "path": "C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2032.0_x64__qbz5n2kfra8p0\\lib\\ntpath.py"
+            }
+          }
+        },
+        {
+          "type": "probe",
+          "name": "actuator",
+          "timeout": 300,
+          "tolerance": 200,
+          "actuator": "http://127.0.0.1:8082/actuator",
+          "tracing_provider": "jaeger",
+          "tracing_host": "127.0.0.1",
+          "provider": {
+            "type": "http",
+            "url": "http://localhost:8082/actuator",
+            "method": "GET"
+          },
+          "arguments": "",
+          "tracing_port": 6831,
+          "tracing_propagation": "b3"
+        },
+        {
+          "type": "probe",
+          "name": "function-must-respond",
+          "tolerance": 200,
+          "provider": {
+            "type": "http",
+            "timeout": [
+              3,
+              500
+            ],
+            "secrets": [],
+            "url": "http://localhost:8082/actuator",
+            "method": "GET",
+            "headers": {
+              "Content-Type": "application/json",
+              "Authorization": ""
+            },
+            "arguments": ""
+          }
+        },
+        {
+          "type": "probe",
+          "name": "function-must-exist",
+          "tolerance": 200,
+          "provider": {
+            "type": "http",
+            "timeout": [
+              5,
+              1000
+            ],
+            "secrets": [],
+            "url": "http://localhost:8082/actuator",
+            "headers": {
+              "Authorization": ""
+            }
+          }
+        }
+      ]
+    },
+    "controls": [
+      {
+        "name": "tracing",
+        "scope": "before",
+        "automatic": false,
+        "span": "producer",
+        "provider": {
+          "type": "python",
+          "module": "chaostracing.control",
+          "func": "cleanup_control"
+        }
+      }
+    ],
+    "method": [
+      {
+        "name": "method-tracing",
+        "scope": "after",
+        "type": "action",
+        "automatic": false,
+        "span": "producer",
+        "provider": {
+          "type": "python",
+          "func": "configure_control",
+          "module": "chaostracing.control",
+          "arguments": {
+            "tracer": "opentracing.Tracer"
+          }
+        },
+        "pauses": {
+          "after": 20
+        }
+      },
+      {
+        "name": "stress_endpoint",
+        "type": "action",
+        "provider": {
+          "type": "python",
+          "module": "chaosk6.actions",
+          "func": "stress_endpoint",
+          "arguments": {
+            "endpoint": "http://localhost:8082/actuator"
+          }
+        }
+      },
+      {
+        "name": "trigger-kill",
+        "provider": {
+          "type": "http",
+          "url": "http://localhost:8082/actuator"
+        },
+        "type": "probe"
+      },
+      {
+        "name": "enable_chaosmonkey",
+        "provider": {
+          "arguments": {
+            "base_url": "http://localhost:8082/actuator"
+          },
+          "func": "enable_chaosmonkey",
+          "module": "chaosspring.actions",
+          "type": "python"
+        },
+        "type": "action"
+      },
+      {
+        "type": "action",
+        "name": "simulate-user-traffic",
+        "background": true,
+        "provider": {
+          "type": "process",
+          "path": "actuator",
+          "arguments": "-cpus 2 attack -targets=data/scenario.txt -workers=2 -connections=2 -rate=3 -timeout=10s -duration=3s -output=result.bin"
+        }
+      },
+      {
+        "type": "action",
+        "name": "disable_chaosmonkey",
+        "provider": {
+          "arguments": {
+            "base_url": "http://localhost:8082/actuator"
+          },
+          "func": "disable_chaosmonkey",
+          "module": "chaosspring.actions",
+          "type": "python"
+        }
+      },
+      {
+        "type": "action",
+        "name": "file-be-gone",
+        "provider": {
+          "type": "python",
+          "module": "os",
+          "func": "remove",
+          "arguments": {
+            "path": "C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2032.0_x64__qbz5n2kfra8p0\\lib\\ntpath.py"
+          }
+        },
+        "pauses": {
+          "after": 100
+        }
+      },
+      {
+        "ref": "file-must-exist"
+      }
+    ],
+    "rollbacks": [],
+    "dry": false
+  },
+  "start": "2021-10-10T16:11:32.744174",
+  "status": "completed",
+  "deviated": false,
+  "steady_states": {
+    "before": {
+      "steady_state_met": true,
+      "probes": [
+        {
+          "activity": {
+            "type": "probe",
+            "name": "file-must-exist",
+            "tolerance": true,
+            "provider": {
+              "type": "python",
+              "module": "os.path",
+              "func": "exists",
+              "arguments": {
+                "path": "C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2032.0_x64__qbz5n2kfra8p0\\lib\\ntpath.py"
+              }
+            }
+          },
+          "output": true,
+          "status": "succeeded",
+          "start": "2021-10-10T16:11:32.836911",
+          "end": "2021-10-10T16:11:32.836911",
+          "duration": 0.0,
+          "tolerance_met": true
+        },
+        {
+          "activity": {
+            "type": "probe",
+            "name": "actuator",
+            "timeout": 300,
+            "tolerance": 200,
+            "actuator": "http://127.0.0.1:8082/actuator",
+            "tracing_provider": "jaeger",
+            "tracing_host": "127.0.0.1",
+            "provider": {
+              "type": "http",
+              "url": "http://localhost:8082/actuator",
+              "method": "GET"
+            },
+            "arguments": "",
+            "tracing_port": 6831,
+            "tracing_propagation": "b3"
+          },
+          "output": {
+            "status": 200,
+            "headers": {
+              "X-Powered-By": "Express",
+              "Content-Type": "application/json; charset=utf-8",
+              "Content-Length": "15",
+              "ETag": "W/\"f-LGyo6FoLQfwOjZ2TD8Ehq8OjkFc\"",
+              "Date": "Sun, 10 Oct 2021 16:11:32 GMT",
+              "Connection": "keep-alive",
+              "Keep-Alive": "timeout=5"
+            },
+            "body": "{\"status\": \"0\"}"
+          },
+          "status": "succeeded",
+          "start": "2021-10-10T16:11:32.837912",
+          "end": "2021-10-10T16:11:32.841882",
+          "duration": 0.00397,
+          "tolerance_met": true
+        },
+        {
+          "activity": {
+            "type": "probe",
+            "name": "function-must-respond",
+            "tolerance": 200,
+            "provider": {
+              "type": "http",
+              "timeout": [
+                3,
+                500
+              ],
+              "secrets": [],
+              "url": "http://localhost:8082/actuator",
+              "method": "GET",
+              "headers": {
+                "Content-Type": "application/json",
+                "Authorization": ""
+              },
+              "arguments": ""
+            }
+          },
+          "output": {
+            "status": 200,
+            "headers": {
+              "X-Powered-By": "Express",
+              "Content-Type": "application/json; charset=utf-8",
+              "Content-Length": "15",
+              "ETag": "W/\"f-LGyo6FoLQfwOjZ2TD8Ehq8OjkFc\"",
+              "Date": "Sun, 10 Oct 2021 16:11:32 GMT",
+              "Connection": "keep-alive",
+              "Keep-Alive": "timeout=5"
+            },
+            "body": "{\"status\": \"0\"}"
+          },
+          "status": "succeeded",
+          "start": "2021-10-10T16:11:32.843081",
+          "end": "2021-10-10T16:11:32.856288",
+          "duration": 0.013207,
+          "tolerance_met": true
+        },
+        {
+          "activity": {
+            "type": "probe",
+            "name": "function-must-exist",
+            "tolerance": 200,
+            "provider": {
+              "type": "http",
+              "timeout": [
+                5,
+                1000
+              ],
+              "secrets": [],
+              "url": "http://localhost:8082/actuator",
+              "headers": {
+                "Authorization": ""
+              }
+            }
+          },
+          "output": {
+            "status": 200,
+            "headers": {
+              "X-Powered-By": "Express",
+              "Content-Type": "application/json; charset=utf-8",
+              "Content-Length": "15",
+              "ETag": "W/\"f-LGyo6FoLQfwOjZ2TD8Ehq8OjkFc\"",
+              "Date": "Sun, 10 Oct 2021 16:11:32 GMT",
+              "Connection": "keep-alive",
+              "Keep-Alive": "timeout=5"
+            },
+            "body": "{\"status\": \"0\"}"
+          },
+          "status": "succeeded",
+          "start": "2021-10-10T16:11:32.856288",
+          "end": "2021-10-10T16:11:32.871383",
+          "duration": 0.015095,
+          "tolerance_met": true
+        }
+      ]
+    },
+    "after": {
+      "steady_state_met": true,
+      "probes": [
+        {
+          "activity": {
+            "type": "probe",
+            "name": "file-must-exist",
+            "tolerance": true,
+            "provider": {
+              "type": "python",
+              "module": "os.path",
+              "func": "exists",
+              "arguments": {
+                "path": "C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2032.0_x64__qbz5n2kfra8p0\\lib\\ntpath.py"
+              }
+            }
+          },
+          "output": true,
+          "status": "succeeded",
+          "start": "2021-10-10T16:13:32.959144",
+          "end": "2021-10-10T16:13:32.959144",
+          "duration": 0.0,
+          "tolerance_met": true
+        },
+        {
+          "activity": {
+            "type": "probe",
+            "name": "actuator",
+            "timeout": 300,
+            "tolerance": 200,
+            "actuator": "http://127.0.0.1:8082/actuator",
+            "tracing_provider": "jaeger",
+            "tracing_host": "127.0.0.1",
+            "provider": {
+              "type": "http",
+              "url": "http://localhost:8082/actuator",
+              "method": "GET"
+            },
+            "arguments": "",
+            "tracing_port": 6831,
+            "tracing_propagation": "b3"
+          },
+          "output": {
+            "status": 200,
+            "headers": {
+              "X-Powered-By": "Express",
+              "Content-Type": "application/json; charset=utf-8",
+              "Content-Length": "15",
+              "ETag": "W/\"f-LGyo6FoLQfwOjZ2TD8Ehq8OjkFc\"",
+              "Date": "Sun, 10 Oct 2021 16:13:32 GMT",
+              "Connection": "keep-alive",
+              "Keep-Alive": "timeout=5"
+            },
+            "body": "{\"status\": \"0\"}"
+          },
+          "status": "succeeded",
+          "start": "2021-10-10T16:13:32.960294",
+          "end": "2021-10-10T16:13:32.964294",
+          "duration": 0.004,
+          "tolerance_met": true
+        },
+        {
+          "activity": {
+            "type": "probe",
+            "name": "function-must-respond",
+            "tolerance": 200,
+            "provider": {
+              "type": "http",
+              "timeout": [
+                3,
+                500
+              ],
+              "secrets": [],
+              "url": "http://localhost:8082/actuator",
+              "method": "GET",
+              "headers": {
+                "Content-Type": "application/json",
+                "Authorization": ""
+              },
+              "arguments": ""
+            }
+          },
+          "output": {
+            "status": 200,
+            "headers": {
+              "X-Powered-By": "Express",
+              "Content-Type": "application/json; charset=utf-8",
+              "Content-Length": "15",
+              "ETag": "W/\"f-LGyo6FoLQfwOjZ2TD8Ehq8OjkFc\"",
+              "Date": "Sun, 10 Oct 2021 16:13:32 GMT",
+              "Connection": "keep-alive",
+              "Keep-Alive": "timeout=5"
+            },
+            "body": "{\"status\": \"0\"}"
+          },
+          "status": "succeeded",
+          "start": "2021-10-10T16:13:32.965294",
+          "end": "2021-10-10T16:13:32.978463",
+          "duration": 0.013169,
+          "tolerance_met": true
+        },
+        {
+          "activity": {
+            "type": "probe",
+            "name": "function-must-exist",
+            "tolerance": 200,
+            "provider": {
+              "type": "http",
+              "timeout": [
+                5,
+                1000
+              ],
+              "secrets": [],
+              "url": "http://localhost:8082/actuator",
+              "headers": {
+                "Authorization": ""
+              }
+            }
+          },
+          "output": {
+            "status": 200,
+            "headers": {
+              "X-Powered-By": "Express",
+              "Content-Type": "application/json; charset=utf-8",
+              "Content-Length": "15",
+              "ETag": "W/\"f-LGyo6FoLQfwOjZ2TD8Ehq8OjkFc\"",
+              "Date": "Sun, 10 Oct 2021 16:13:32 GMT",
+              "Connection": "keep-alive",
+              "Keep-Alive": "timeout=5"
+            },
+            "body": "{\"status\": \"0\"}"
+          },
+          "status": "succeeded",
+          "start": "2021-10-10T16:13:32.979477",
+          "end": "2021-10-10T16:13:33.000089",
+          "duration": 0.020612,
+          "tolerance_met": true
+        }
+      ]
+    },
+    "during": []
+  },
+  "run": [
+    {
+      "activity": {
+        "name": "method-tracing",
+        "scope": "after",
+        "type": "action",
+        "automatic": false,
+        "span": "producer",
+        "provider": {
+          "type": "python",
+          "func": "configure_control",
+          "module": "chaostracing.control",
+          "arguments": {
+            "tracer": "opentracing.Tracer"
+          }
+        },
+        "pauses": {
+          "after": 20
+        }
+      },
+      "output": null,
+      "status": "succeeded",
+      "start": "2021-10-10T16:11:32.873600",
+      "end": "2021-10-10T16:11:32.875604",
+      "duration": 0.002004
+    },
+    {
+      "activity": {
+        "name": "stress_endpoint",
+        "type": "action",
+        "provider": {
+          "type": "python",
+          "module": "chaosk6.actions",
+          "func": "stress_endpoint",
+          "arguments": {
+            "endpoint": "http://localhost:8082/actuator"
+          }
+        }
+      },
+      "output": null,
+      "status": "failed",
+      "exception": [
+        "Traceback (most recent call last):\n",
+        "  File \"C:\\Users\\asunder\\.venvs\\chaostk\\lib\\site-packages\\chaoslib\\provider\\python.py\", line 55, in run_python_activity\n    return func(**arguments)\n",
+        "  File \"C:\\Users\\asunder\\.venvs\\chaostk\\lib\\site-packages\\chaosk6\\actions.py\", line 57, in stress_endpoint\n    r = _runScript(jsPath + \"/single-endpoint.js\", vus, duration, env)\n",
+        "  File \"C:\\Users\\asunder\\.venvs\\chaostk\\lib\\site-packages\\chaosk6\\actions.py\", line 74, in _runScript\n    with subprocess.Popen(\n",
+        "  File \"C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2032.0_x64__qbz5n2kfra8p0\\lib\\subprocess.py\", line 951, in __init__\n    self._execute_child(args, executable, preexec_fn, close_fds,\n",
+        "  File \"C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2032.0_x64__qbz5n2kfra8p0\\lib\\subprocess.py\", line 1420, in _execute_child\n    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,\n",
+        "FileNotFoundError: [WinError 2] The system cannot find the file specified\n",
+        "\nDuring handling of the above exception, another exception occurred:\n\n",
+        "chaoslib.exceptions.ActivityFailed: FileNotFoundError: [WinError 2] The system cannot find the file specified\n"
+      ],
+      "start": "2021-10-10T16:11:52.881647",
+      "end": "2021-10-10T16:11:52.903626",
+      "duration": 0.021979
+    },
+    {
+      "activity": {
+        "name": "trigger-kill",
+        "provider": {
+          "type": "http",
+          "url": "http://localhost:8082/actuator"
+        },
+        "type": "probe"
+      },
+      "output": {
+        "status": 200,
+        "headers": {
+          "X-Powered-By": "Express",
+          "Content-Type": "application/json; charset=utf-8",
+          "Content-Length": "15",
+          "ETag": "W/\"f-LGyo6FoLQfwOjZ2TD8Ehq8OjkFc\"",
+          "Date": "Sun, 10 Oct 2021 16:11:52 GMT",
+          "Connection": "keep-alive",
+          "Keep-Alive": "timeout=5"
+        },
+        "body": "{\"status\": \"0\"}"
+      },
+      "status": "succeeded",
+      "start": "2021-10-10T16:11:52.904626",
+      "end": "2021-10-10T16:11:52.910627",
+      "duration": 0.006001
+    },
+    {
+      "activity": {
+        "name": "enable_chaosmonkey",
+        "provider": {
+          "arguments": {
+            "base_url": "http://localhost:8082/actuator"
+          },
+          "func": "enable_chaosmonkey",
+          "module": "chaosspring.actions",
+          "type": "python"
+        },
+        "type": "action"
+      },
+      "output": null,
+      "status": "failed",
+      "exception": [
+        "Traceback (most recent call last):\n",
+        "  File \"C:\\Users\\asunder\\.venvs\\chaostk\\lib\\site-packages\\chaoslib\\provider\\python.py\", line 55, in run_python_activity\n    return func(**arguments)\n",
+        "  File \"C:\\Users\\asunder\\.venvs\\chaostk\\lib\\site-packages\\chaosspring\\actions.py\", line 33, in enable_chaosmonkey\n    raise FailedActivity(\n",
+        "chaoslib.exceptions.ActivityFailed: Enable ChaosMonkey failed: <!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot POST /actuator/chaosmonkey/enable</pre>\n</body>\n</html>\n\n",
+        "\nDuring handling of the above exception, another exception occurred:\n\n",
+        "chaoslib.exceptions.ActivityFailed: chaoslib.exceptions.ActivityFailed: Enable ChaosMonkey failed: <!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot POST /actuator/chaosmonkey/enable</pre>\n</body>\n</html>\n"
+      ],
+      "start": "2021-10-10T16:11:52.911628",
+      "end": "2021-10-10T16:11:52.929661",
+      "duration": 0.018033
+    },
+    {
+      "activity": {
+        "type": "action",
+        "name": "simulate-user-traffic",
+        "background": true,
+        "provider": {
+          "type": "process",
+          "path": "actuator",
+          "arguments": "-cpus 2 attack -targets=data/scenario.txt -workers=2 -connections=2 -rate=3 -timeout=10s -duration=3s -output=result.bin"
+        }
+      },
+      "output": {
+        "status": 1,
+        "stdout": "",
+        "stderr": ""
+      },
+      "status": "succeeded",
+      "start": "2021-10-10T16:11:52.930626",
+      "end": "2021-10-10T16:11:58.160591",
+      "duration": 5.229965
+    },
+    {
+      "activity": {
+        "type": "action",
+        "name": "disable_chaosmonkey",
+        "provider": {
+          "arguments": {
+            "base_url": "http://localhost:8082/actuator"
+          },
+          "func": "disable_chaosmonkey",
+          "module": "chaosspring.actions",
+          "type": "python"
+        }
+      },
+      "output": null,
+      "status": "failed",
+      "exception": [
+        "Traceback (most recent call last):\n",
+        "  File \"C:\\Users\\asunder\\.venvs\\chaostk\\lib\\site-packages\\chaoslib\\provider\\python.py\", line 55, in run_python_activity\n    return func(**arguments)\n",
+        "  File \"C:\\Users\\asunder\\.venvs\\chaostk\\lib\\site-packages\\chaosspring\\actions.py\", line 57, in disable_chaosmonkey\n    raise FailedActivity(\n",
+        "chaoslib.exceptions.ActivityFailed: Disable ChaosMonkey failed: <!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot POST /actuator/chaosmonkey/disable</pre>\n</body>\n</html>\n\n",
+        "\nDuring handling of the above exception, another exception occurred:\n\n",
+        "chaoslib.exceptions.ActivityFailed: chaoslib.exceptions.ActivityFailed: Disable ChaosMonkey failed: <!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot POST /actuator/chaosmonkey/disable</pre>\n</body>\n</html>\n"
+      ],
+      "start": "2021-10-10T16:11:52.930626",
+      "end": "2021-10-10T16:11:52.938666",
+      "duration": 0.00804
+    },
+    {
+      "activity": {
+        "type": "action",
+        "name": "file-be-gone",
+        "provider": {
+          "type": "python",
+          "module": "os",
+          "func": "remove",
+          "arguments": {
+            "path": "C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2032.0_x64__qbz5n2kfra8p0\\lib\\ntpath.py"
+          }
+        },
+        "pauses": {
+          "after": 100
+        }
+      },
+      "output": null,
+      "status": "failed",
+      "exception": [
+        "Traceback (most recent call last):\n",
+        "  File \"C:\\Users\\asunder\\.venvs\\chaostk\\lib\\site-packages\\chaoslib\\provider\\python.py\", line 55, in run_python_activity\n    return func(**arguments)\n",
+        "PermissionError: [WinError 5] Access is denied: 'C:\\\\Program Files\\\\WindowsApps\\\\PythonSoftwareFoundation.Python.3.9_3.9.2032.0_x64__qbz5n2kfra8p0\\\\lib\\\\ntpath.py'\n",
+        "\nDuring handling of the above exception, another exception occurred:\n\n",
+        "chaoslib.exceptions.ActivityFailed: PermissionError: [WinError 5] Access is denied: 'C:\\\\Program Files\\\\WindowsApps\\\\PythonSoftwareFoundation.Python.3.9_3.9.2032.0_x64__qbz5n2kfra8p0\\\\lib\\\\ntpath.py'\n"
+      ],
+      "start": "2021-10-10T16:11:52.939663",
+      "end": "2021-10-10T16:11:52.941235",
+      "duration": 0.001572
+    },
+    {
+      "activity": {
+        "type": "probe",
+        "name": "file-must-exist",
+        "tolerance": true,
+        "provider": {
+          "type": "python",
+          "module": "os.path",
+          "func": "exists",
+          "arguments": {
+            "path": "C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2032.0_x64__qbz5n2kfra8p0\\lib\\ntpath.py"
+          }
+        }
+      },
+      "output": true,
+      "status": "succeeded",
+      "start": "2021-10-10T16:13:32.955169",
+      "end": "2021-10-10T16:13:32.957177",
+      "duration": 0.002008
+    }
+  ],
+  "rollbacks": [],
+  "end": "2021-10-10T16:13:33.002088",
+  "duration": 120.25791382789612
+}

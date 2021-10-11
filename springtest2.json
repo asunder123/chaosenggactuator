@@ -7,17 +7,17 @@
     },
     "steady-state-hypothesis": {
         "title": "The file must be around first",
-        "probes": [
+        "probes":[
             {
                 "type": "probe",
-                "name": "file-must-exist",
-                "tolerance": true,
+                "name": "turtle",
+                "tolerance": 4,
                 "provider": {
                     "type": "python",
-                    "module": "os.path",
-                    "func": "exists",
+                    "module": "turtle",
+                    "func": "forward",
                     "arguments": {
-                        "path": "C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.9_3.9.2032.0_x64__qbz5n2kfra8p0\\lib\\ntpath.py"
+                        "distance": 5.00
                     }
                 }
             }
@@ -40,7 +40,7 @@
             }
         },
         {
-            "ref": "file-must-exist"
+            "ref": "turtle"
         }
     ]
 }

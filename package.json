@@ -16,8 +16,10 @@
     "appmetrics-zipkin": "^1.0.3",
     "body-parser": "^1.18.2",
     "chaos-monkey": "^1.0.0",
+    "config": "^3.3.6",
     "express-remove-route": "^1.0.0",
     "jaeger-client": "^3.18.1",
+    "node": "^16.10.0",
     "node-fetch": "^2.6.5",
     "noop-logger": "^0.1.1",
     "object-sizeof": "^1.2.0",
@@ -27,6 +29,7 @@
     "randomstring": "^1.1.5",
     "res": "^0.4.0",
     "response": "^0.1.0",
+    "upgrade": "^1.1.0",
     "zipkin": "^0.22.0",
     "zipkin-instrumentation-fetch": "^0.22.0"
   },
